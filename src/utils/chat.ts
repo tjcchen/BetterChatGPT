@@ -63,11 +63,13 @@ export const chatToMarkdown = (chat: ChatInterface) => {
   let markdown = `# ${chat.title}\n\n`;
   chat.messages.forEach((message) => {
     markdown += `### **${message.role}**:\n\n${message.content}\n\n---\n\n`;
+    console.log(markdown);
   });
   return markdown;
 };
 
 export const downloadMarkdown = (markdown: string, fileName: string) => {
+  console.log('downloadMarkdown');
   const link = document.createElement('a');
   const markdownFile = new Blob([markdown], { type: 'text/markdown' });
   link.href = URL.createObjectURL(markdownFile);

@@ -73,6 +73,8 @@ function App() {
     }
   }, []);
 
+  console.log('chatInterface works!');
+
   return (
     <div className='overflow-hidden w-full h-full relative'>
       <Menu />
